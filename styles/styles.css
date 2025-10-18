@@ -19,7 +19,6 @@
     --space-xl: 60px;
 }
 
-/* Базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -33,14 +32,6 @@ body {
     background-color: var(--color-light);
 }
 
-.hero-section {
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
-    color: var(--color-white);
-    padding: var(--space-xl) 0;
-    margin-bottom: var(--space-xl);
-}
-
-/* Блок page */
 .page {
     max-width: 1200px;
     margin: 0 auto;
@@ -51,7 +42,6 @@ body {
     min-height: 100vh;
 }
 
-/* Блок header */
 .header {
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
     color: var(--color-white);
@@ -80,12 +70,12 @@ body {
     max-height: 100%;
     object-fit: contain;
 }
+
 .header__title {
     font-size: 2rem;
     font-weight: 600;
 }
 
-/* Блок nav */
 .nav {
     background: var(--color-white);
     box-shadow: var(--shadow);
@@ -130,7 +120,6 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Блок main */
 .main {
     padding: var(--space-xl);
     flex: 1;
@@ -144,7 +133,6 @@ body {
     text-align: center;
 }
 
-/* Стили для главной страницы */
 .profile-section {
     margin-bottom: var(--space-xl);
 }
@@ -228,7 +216,6 @@ body {
     background: var(--color-accent-dark);
 }
 
-/* Стили для секции навыков */
 .skills-section {
     margin-bottom: var(--space-xl);
 }
@@ -302,7 +289,6 @@ body {
     100% { transform: translateX(100%); }
 }
 
-/* Стили для превью проектов */
 .projects-preview {
     margin-bottom: var(--space-xl);
 }
@@ -313,22 +299,15 @@ body {
     gap: 20px;
 }
 
-.project-card {
+.project-preview {
     background: var(--color-white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
+    transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-
-.project-card:hover {
+.project-preview:hover {
     transform: scale(1.05);
 }
 
@@ -347,36 +326,6 @@ body {
     font-size: 0.95rem;
 }
 
-.projects-actions {
-    text-align: center;
-}
-
-.view-all-btn {
-    display: inline-block;
-    padding: var(--space-md) var(--space-lg);
-    background: var(--color-main);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    box-shadow: var(--shadow);
-}
-
-.view-all-btn:hover {
-    background: var(--color-accent);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
-}
-
-.projects-hero {
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
-    color: var(--color-white);
-    padding: var(--space-xl) 0;
-    margin-bottom: var(--space-xl);
-    text-align: center;
-}
-
 .projects-header {
     display: flex;
     justify-content: space-between;
@@ -386,8 +335,7 @@ body {
     gap: var(--space-md);
 }
 
-.filter-buttons {
-    margin-bottom: var(--space-lg);
+.projects-filters {
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
@@ -395,7 +343,6 @@ body {
 }
 
 .filter-btn {
-    margin: 0 5px 10px;
     border-radius: 20px;
     padding: 8px 20px;
     border: 2px solid #dee2e6;
@@ -415,6 +362,19 @@ body {
     box-shadow: var(--shadow);
 }
 
+.project-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
 .project-card__image {
     position: relative;
     height: 200px;
@@ -429,40 +389,8 @@ body {
     border-radius: var(--radius) var(--radius) 0 0;
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.view-project-btn {
-    padding: var(--space-sm) var(--space-md);
-    background: var(--color-accent);
-    color: var(--color-white);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.view-project-btn:hover {
-    background: var(--color-white);
-    color: var(--color-accent);
-    transform: translateY(-2px);
+.project-card:hover .project-card__image img {
+    transform: scale(1.05);
 }
 
 .project-card__content {
@@ -497,31 +425,6 @@ body {
     font-size: 0.85rem;
     color: var(--color-main);
     font-weight: 500;
-}
-
-.project-card__links {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.project-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-accent);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.project-link:hover {
-    color: var(--color-accent-dark);
-    transform: translateY(-1px);
-}
-
-.link-icon {
-    font-size: 1.1rem;
 }
 
 .diary-content {
@@ -589,10 +492,6 @@ body {
     border-left-color: #ffc107;
 }
 
-.progress-item.pending {
-    border-left-color: var(--color-gray);
-}
-
 .progress-icon {
     margin-right: var(--space-md);
 }
@@ -616,11 +515,6 @@ body {
 .progress-item.in-progress .icon {
     background: #ffc107;
     color: black;
-}
-
-.progress-item.pending .icon {
-    background: var(--color-gray);
-    color: white;
 }
 
 .progress-info h4 {
@@ -703,7 +597,7 @@ body {
     gap: var(--space-md);
 }
 
-.form-card, .info-card, .hours-card {
+.form-card, .info-card {
     background: var(--color-white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -711,28 +605,27 @@ body {
     transition: transform 0.3s ease;
 }
 
-.form-card:hover, .info-card:hover, .hours-card:hover {
+.form-card:hover, .info-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
 
-.form-header, .info-header, .hours-header {
+.form-header, .info-header {
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
     color: var(--color-white);
     padding: var(--space-lg);
 }
 
-.form-header h3, .info-header h3, .hours-header h3 {
+.form-header h3, .info-header h3 {
     margin: 0;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
-.form-body, .info-body, .hours-body {
+.form-body, .info-body {
     padding: var(--space-lg);
 }
 
-/* Стили формы */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -751,7 +644,7 @@ body {
     font-size: 0.95rem;
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input, .form-textarea {
     padding: var(--space-md);
     border: 2px solid var(--color-light);
     border-radius: var(--radius-sm);
@@ -760,7 +653,7 @@ body {
     font-family: inherit;
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus, .form-textarea:focus {
     outline: none;
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
@@ -770,45 +663,6 @@ body {
 .form-textarea {
     resize: vertical;
     min-height: 120px;
-}
-
-/* Чекбокс */
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--color-gray);
-}
-
-.checkbox-label input {
-    display: none;
-}
-
-.checkmark {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--color-accent);
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.checkbox-label input:checked + .checkmark {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-}
-
-.checkbox-label input:checked + .checkmark::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-white);
-    font-weight: bold;
-    font-size: 12px;
 }
 
 .submit-btn {
@@ -830,7 +684,6 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
-/* Контактная информация */
 .contact-item {
     display: flex;
     align-items: center;
@@ -862,13 +715,6 @@ body {
     object-fit: contain;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
 .contact-details h4 {
     margin: 0 0 4px 0;
     color: var(--color-main);
@@ -882,35 +728,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Время работы */
-.time-slot {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-sm) 0;
-    border-bottom: 1px solid var(--color-light);
-    transition: all 0.3s ease;
-}
-
-.time-slot:hover {
-    background: var(--color-light);
-    padding: var(--space-sm) var(--space-sm);
-    border-radius: var(--radius-sm);
-}
-
-.time-slot:last-child {
-    border-bottom: none;
-}
-
-.days {
-    font-weight: 600;
-    color: var(--color-main);
-}
-
-.hours {
-    color: var(--color-gray);
-}
-
-/* Блок footer */
 .footer {
     background: var(--color-main);
     color: var(--color-white);
@@ -956,8 +773,7 @@ body {
     
     .diary-content,
     .contacts-content {
-    flex: 1;
-    width: 100%;
+        grid-template-columns: 1fr;
     }
     
     .projects-header {
@@ -965,7 +781,7 @@ body {
         align-items: stretch;
     }
     
-    .filter-buttons {
+    .projects-filters {
         justify-content: center;
     }
     
@@ -973,9 +789,8 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .project-card__links {
-        flex-direction: column;
-        gap: var(--space-sm);
+    .main {
+        padding: var(--space-lg);
     }
     
     .progress-item {
@@ -987,13 +802,8 @@ body {
         margin-right: 0;
         margin-bottom: var(--space-sm);
     }
-    
-    .main {
-        padding: var(--space-lg);
-    }
 }
 
-/* Анимации */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1007,21 +817,24 @@ body {
 
 .profile-card,
 .skill-item,
+.project-preview,
 .project-card,
 .progress-card,
 .courses-card,
 .form-card,
-.info-card,
-.hours-card {
+.info-card {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Задержки для анимаций */
 .profile-card { animation-delay: 0.1s; }
 .skill-item:nth-child(1) { animation-delay: 0.2s; }
 .skill-item:nth-child(2) { animation-delay: 0.3s; }
 .skill-item:nth-child(3) { animation-delay: 0.4s; }
 .skill-item:nth-child(4) { animation-delay: 0.5s; }
+.project-preview:nth-child(1) { animation-delay: 0.2s; }
+.project-preview:nth-child(2) { animation-delay: 0.3s; }
+.project-preview:nth-child(3) { animation-delay: 0.4s; }
 .project-card:nth-child(1) { animation-delay: 0.2s; }
 .project-card:nth-child(2) { animation-delay: 0.3s; }
 .project-card:nth-child(3) { animation-delay: 0.4s; }
+.project-card:nth-child(4) { animation-delay: 0.5s; }
