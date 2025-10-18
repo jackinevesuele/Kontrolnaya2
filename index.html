@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Босарев Евгений</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Босарев Евгений" onerror="this.src='images/placeholder.jpg'" class="logo-image">
+                </div>
+                <h1 class="header__title">Босарев Евгений</h1>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/projects.html">Проекты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/diary.html">Дневник</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <!-- Секция профиля -->
+            <section class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="images/photo.jpg" alt="Босарев Евгений" onerror="this.src='images/placeholder.jpg'">
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-greeting">Привет! Я студент</h2>
+                        <p class="profile-details">Факультет Информационных технологий, группа ЭФБО-11-24</p>
+                        <p class="profile-bio">
+                            Увлекаюсь веб-разработкой
+                        </p>
+                        <button class="download-btn" onclick="downloadResume()">
+                            Скачать резюме
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция навыков -->
+            <section class="skills-section">
+                <h2 class="section-title">Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+            </section>
+            <section class="projects-preview">
+                <h2 class="section-title">Лучшие проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-preview">
+                        <h3 class="project-title">Калькулятор ИМТ</h3>
+                        <p class="project-tech">C++</p>
+                    </div>
+
+                    <div class="project-preview">
+                        <h3 class="project-title">Личный сайт портфолио</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript</p>
+                    </div>
+
+                    <div class="project-preview">
+                        <h3 class="project-title">Учебные проекты</h3>
+                        <p class="project-tech">JavaScript, HTML, CSS, C#, C++</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Контакты</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/filters.js"></script>
+    <script src="../scripts/modal.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="../images/logo.jpg" alt="Босарев Евгений" onerror="this.src='../images/placeholder.jpg'" class="logo-image">
+                </div>
+                <h1 class="header__title">Босарев Евгений</h1>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="projects.html">Проекты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="diary.html">Дневник</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main">
+    <section class="projects">
+        <div class="projects-header">
+            <h2 class="section-title">Мои проекты</h2>
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="html">HTML</button>
+                <button class="filter-btn" data-filter="js">JS</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Проект 1 -->
+            <div class="project-card" data-tech="html">
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Личный сайт</h3>
+                    <div class="project-card__image">
+                        <img src="../images/project1.jpg" alt="Личный сайт" onerror="this.src='../images/placeholder.jpg'">
+                    </div>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 2 -->
+            <div class="project-card" data-tech="js">
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Тodo-приложение</h3>
+                    <div class="project-card__image">
+                        <img src="../images/project2.jpg" alt="Todo приложение" onerror="this.src='../images/placeholder.jpg'">
+                    </div>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 3 -->
+            <div class="project-card" data-tech="react">
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Интернет-магазин</h3>
+                    <div class="project-card__image">
+                        <img src="../images/project3.jpg" alt="Интернет-магазин" onerror="this.src='../images/placeholder.jpg'">
+                    </div>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 4 -->
+            <div class="project-card" data-tech="bootstrap">
+                <div class="project-card__content">
+                    <h3 class="project-card__title">Портфолио</h3>
+                    <div class="project-card__image">
+                        <img src="../images/project4.jpg" alt="Портфолио" onerror="this.src='../images/placeholder.jpg'">
+                    </div>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Контакты</p>
+        </footer>
+    </div>
+</body>
+</html>
